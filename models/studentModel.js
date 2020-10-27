@@ -15,7 +15,7 @@ const studentSchema = mongoose.Schema({
     },
     studentBranch: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: Branches,
+        ref: 'Branches',
     },
     studentStartYear: {
         type: Number,
@@ -24,5 +24,11 @@ const studentSchema = mongoose.Schema({
     studentEndYear: {
         type: Number,
         required: true,
-    }
+    },
+    studentCourses: [
+        {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Courses'
+        }
+    ]
 })

@@ -12,5 +12,9 @@ const courseSchema = mongoose.Schema({
     courseCredits: {
         type: Number,
         required: true
+    },
+    courseMarks: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'theoryMarks'
     }
 })
