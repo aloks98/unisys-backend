@@ -1,34 +1,32 @@
 const mongoose = require("mongoose");
 
-const studentSchema = mongoose.Schema({
-	studentId: {
+const teacherSchema = mongoose.Schema({
+	teacherId: {
 		type: String,
 		required: true,
 	},
-	studentName: {
+	teacherName: {
 		type: String,
 		required: true,
 	},
-	studentProgramme: {
+	teacherMajorSubject: {
 		type: String,
 		required: true,
 	},
-	studentBranch: {
+	teacherFacultyBranch: {
 		type: mongoose.Schema.Types.ObjectId,
 		ref: "Branches",
 	},
-	studentStartYear: {
+	teacherStartYear: {
 		type: Number,
 		required: true,
 	},
-	studentEndYear: {
+	teacherPayrollAmount: {
 		type: Number,
 		required: true,
 	},
-	studentCourses: [
-		{
-			type: mongoose.Schema.Types.ObjectId,
-			ref: "Courses",
-		},
-	],
+	teacherPayDate: {
+		type: Date,
+		required: true,
+	},
 });

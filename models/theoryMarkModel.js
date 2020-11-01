@@ -1,7 +1,7 @@
-const mongoose = require('mongoose')
+const mongoose = require("mongoose");
 
 const theoryMarkModelSchema = mongoose.Schema({
-    midsemMarks: Number,
-    quizMarks: Number,
-    endsemMarks: Number,
-})
+	midsemMarks: Number,
+	quizMarks: Number,
+	endsemMarks: Number,
+});
